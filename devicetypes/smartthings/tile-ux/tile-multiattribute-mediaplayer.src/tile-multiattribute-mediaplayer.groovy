@@ -118,5 +118,7 @@ def unmute() {
 }
 
 def setLevel(level) {
-	sendEvent(name: "level", value: level)
+  log.debug "Got setLevel request: ${level}"
+  sendEvent(name: "level", value: level)
+  log.debug "Done with setLevel request"
 }
